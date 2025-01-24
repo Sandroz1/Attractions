@@ -1,0 +1,67 @@
+.main__header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; // Расстояние между элементами
+  margin-bottom: 20px; // Отступ снизу
+
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px; // Ограничиваем ширину поля ввода
+    margin: 0 auto; // Центрируем поле ввода
+
+    &:focus {
+      outline: none;
+      border-color: #ff6b6b; // Цвет рамки при фокусе
+      box-shadow: 0 0 5px rgba(255, 107, 107, 0.5); // Тень при фокусе
+    }
+  }
+
+  .main__header__filter__container,
+  .sort__panel {
+    display: flex;
+    gap: 10px; // Расстояние между кнопками
+    justify-content: center;
+    flex-wrap: wrap; // Перенос кнопок на новую строку, если не хватает места
+
+    button {
+      padding: 10px 15px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ff6b6b; // Кораллово-розовый цвет кнопок
+      color: #fff; // Белый текст
+      cursor: pointer;
+      transition:
+        background-color 0.3s ease,
+        transform 0.3s ease; // Плавное изменение цвета и анимация
+
+      &:hover {
+        background-color: #e65a5a; // Темнее при наведении
+        transform: translateY(-2px); // Легкий подъем при наведении
+      }
+
+      &:active {
+        background-color: #cc4a4a; // Еще темнее при нажатии
+        transform: translateY(0); // Возврат в исходное положение
+      }
+
+      &.active {
+        background-color: #4caf50; // Зеленый цвет для активной кнопки
+        color: #fff; // Белый текст
+        box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3); // Тень для выделения
+
+        &:hover {
+          background-color: #43a047; // Темнее при наведении
+        }
+
+        &:active {
+          background-color: #388e3c; // Еще темнее при нажатии
+        }
+      }
+    }
+  }
+}

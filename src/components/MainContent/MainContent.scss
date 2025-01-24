@@ -1,0 +1,113 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 5vh;
+  &__info {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__link {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #ff4c4c;
+    }
+  }
+
+  &__map {
+    position: relative;
+
+    &-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff6b6b;
+      color: #ffffff;
+      border: none;
+
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ff4c4c;
+      }
+    }
+  }
+}
+
+.map-iframe {
+  border-radius: 20px;
+}
+
+.audio-player {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+
+  audio {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ff6b6b;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &::-webkit-media-controls-panel {
+      background-color: #ff6b6b;
+      border-radius: 10px;
+      gap: 1vh;
+    }
+
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-mute-button {
+      background-color: #ffffff;
+      border-radius: 50%;
+      color: #ff6b6b;
+    }
+
+    &::-webkit-media-controls-current-time-display,
+    &::-webkit-media-controls-time-remaining-display {
+      color: #ffffff;
+    }
+
+    &::-webkit-media-controls-timeline {
+      background-color: #ffffff;
+      border-radius: 5px;
+    }
+
+    &::-webkit-media-controls-volume-slider {
+      background-color: #ffffff;
+      border-radius: 5px;
+    }
+  }
+}
